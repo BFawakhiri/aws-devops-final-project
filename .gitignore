@@ -1,0 +1,6 @@
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+ansible/inventory.ini
+ansible/group_vars/all/encrypted.yml
+.DS_Store
