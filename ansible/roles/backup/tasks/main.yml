@@ -1,0 +1,13 @@
+- name: Copy backup script template
+  template:
+    src: backup.sh.j2
+    dest: /usr/local/bin/backup.sh
+    mode: '0755'
+
+- name: Setup Cron job for daily backups at 2 AM
+  cron:
+    name: "S3 App Backup"
+    minute: "0"
+    hour: "2"
+    job: "/usr/local/bin/backup.sh
+    "

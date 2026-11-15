@@ -1,0 +1,11 @@
+- hosts: web
+  become: yes
+  roles:
+    - docker
+    - app
+    - backup
+
+- hosts: db
+  become: yes
+  roles:
+    - docker
